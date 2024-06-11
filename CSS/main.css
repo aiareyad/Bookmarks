@@ -1,0 +1,689 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    background-color: #453427;
+}
+
+.wallpaper{
+
+    background-image:  url(../imgs/bg3.png);
+    background-position: center center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    background-size: cover;
+}
+
+.overlay{
+
+    opacity: 0;
+    z-index: 1;
+    animation: overlay 2s forwards ease;
+    animation-delay: 1s;
+    z-index: 0;
+}
+
+
+@keyframes overlay {
+
+
+    100%{
+
+        opacity: 0.6;
+    }
+}
+
+.butterfly{
+
+    filter:saturate(60%);
+    opacity: .5;
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    z-index: 2;
+    animation: move 6s forwards ease;
+    animation-delay: 2s;
+    width: 150px;
+}
+
+@keyframes move {
+    
+    100%{
+
+        top: 40%;
+        left: 32%;    
+    }
+}
+
+.base{
+
+    position: absolute;
+    width: 500px;
+    z-index: 3;
+    opacity: 0;
+    animation: base-appear 2s forwards ease;
+    animation-delay: 2s;
+}
+
+.glow-left{
+
+    position: absolute;
+    width: 500px;
+    z-index: 3;
+    opacity: 0;  
+    transition: all 0.5 ease;
+    animation: glow-appear 2s ease;
+    animation-iteration-count: 1;  
+    animation-delay: 2.5s;
+}
+
+.glow-middle{
+
+    position: absolute;
+    width: 500px;
+    z-index: 3;  
+    opacity: 0;  
+    transition: all 0.5 ease;
+    animation: glow-appear 2s ease;
+    animation-iteration-count: 1;  
+    animation-delay: 3s;  
+}
+
+.glow-right{
+
+    position: absolute;
+    width: 500px;
+    z-index: 3;
+    opacity: 0;  
+    transition: all 0.5 ease;
+    animation: glow-appear 2s ease;
+    animation-iteration-count: 1;  
+    animation-delay: 3.5s;      
+}
+
+.extra-glow{
+
+    position: absolute;
+    width: 500px;
+    z-index: 3;
+    opacity: 0;  
+    transition: all 0.5 ease;
+    animation: glow-appear 2s ease;
+    animation-iteration-count: 1;  
+    animation-delay: 4s; 
+
+}
+
+@keyframes base-appear {
+    
+    100%{
+
+        opacity: 1;
+    }
+}
+
+@keyframes glow-appear {
+    
+    0%{
+
+        opacity: 0;
+    }
+
+    50%{
+
+        opacity: 1;
+    }
+
+    100%{
+
+        opacity: 0;
+    }
+}
+
+
+/* .slogan1{
+    
+    z-index: 3;
+    position: absolute;
+    top: 60%;
+    width: 300px;
+    opacity: 0;
+    animation: glow-appear 1s ease;
+    animation-iteration-count: 1;  
+    animation-delay: 6s; 
+}
+
+.slogan2{
+    
+    z-index: 3;
+    position: absolute;
+    top: 60%;
+    width: 300px;
+    opacity: 0;
+    animation: glow-appear 2s ease;
+    animation-iteration-count: 1;  
+    animation-delay: 6s; 
+}
+
+.slogan3{
+    
+    z-index: 3;
+    position: absolute;
+    top: 60%;
+    width: 300px;
+    opacity: 0;
+    animation: glow-appear 2s ease;
+    animation-iteration-count: 1;  
+    animation-delay: 6.5s; 
+} */
+
+.slogan4{
+    
+    z-index: 3;
+    position: absolute;
+    top: 60%;
+    width: 300px;
+    opacity: 0;
+    animation: glow-appear 2s forwards;
+    animation-iteration-count: 1;  
+    animation-delay: 4s; 
+}
+
+.slogan5{
+    
+    z-index: 3;
+    position: absolute;
+    top: 60%;
+    width: 300px;
+    opacity: 0;
+    animation: glow-appear 2s forwards;
+    animation-iteration-count: 1;  
+    animation-delay: 4.3s; 
+}
+
+.slogan6{
+    
+    z-index: 3;
+    position: absolute;
+    top: 60%;
+    width: 300px;
+    opacity: 0;
+    animation: glow-appear 2s forwards;
+    animation-iteration-count: 1;  
+    animation-delay: 4.6s; 
+}
+
+.slogan7{
+    
+    z-index: 3;
+    position: absolute;
+    top: 60%;
+    width: 300px;
+    opacity: 0;
+    animation: appear 2s forwards;
+    animation-iteration-count: 1;  
+    animation-delay: 4.9s; 
+}
+
+@keyframes appear {
+    
+    100%{
+
+        opacity: 0.8;
+    }
+}
+
+.add-btn img{
+
+    position: absolute;
+    color: #c3b09a;
+    z-index: 9999;
+    bottom: -90%;
+    font-size: 20px;
+    opacity: 0;
+    width: 4.5%;
+    cursor: pointer;
+    transform: rotate(180deg);
+    animation: img 1.5s forwards;
+    animation-delay: 7s;
+}
+
+.add-btn h3{
+
+    position: absolute;
+    color: #b49682;
+    z-index: 9999;
+    bottom: 7%;
+    opacity: 0;
+    font-family: "Sorts Mill Goudy", serif;
+    font-size: 20px;
+    cursor: pointer;
+    animation: text 2s forwards;
+    animation-delay: 8.6s;
+}
+
+@keyframes img {
+    
+    100%{
+
+        opacity: 1;
+        bottom: -20%;
+    }
+}
+
+@keyframes text {
+    
+    100%{
+
+        opacity: 1;
+        bottom: 7%;
+    }
+}
+
+.add-btn img:hover {
+
+    filter: brightness(130%);
+}
+
+.add-btn h3:hover{
+
+    filter: brightness(130%);
+}
+
+/* ------------------------------ 2nd ------------------------------ */
+
+.overlay2{
+
+    opacity: 0;
+    z-index: 1;
+    animation: overlay2 2s forwards ease;
+    animation-delay: 1s;
+}
+
+@keyframes overlay2 {
+
+    100%{
+
+        opacity: 0.3;
+    }
+}
+
+
+.one{
+
+    position: absolute;
+    width: 350px;
+    top: 40px;
+    z-index: 3;
+    opacity: 0;
+    animation: base-appear 2s forwards ease;
+    animation-delay: 1s;
+}
+
+.two{
+
+    position: absolute;
+    width: 350px;
+    top: 40px;
+    z-index: 3;
+    opacity: 0;  
+    transition: all 0.5 ease;
+    animation: glow-appear 2s ease;
+    animation-iteration-count: 1;  
+    animation-delay: 3s;
+}
+
+.three{
+
+    position: absolute;
+    width: 350px;
+    top: 40px;
+    z-index: 3;  
+    opacity: 0;  
+    transition: all 0.5 ease;
+    animation: glow-appear 2s ease;
+    animation-iteration-count: 1;  
+    animation-delay: 2.5s;  
+}
+
+.four{
+
+    position: absolute;
+    width: 350px;
+    top: 40px;
+    z-index: 3;
+    opacity: 0;  
+    transition: all 0.5 ease;
+    animation: glow-appear 2s ease;
+    animation-iteration-count: 1;  
+    animation-delay: 2s;      
+}
+
+.five{
+
+    position: absolute;
+    width: 350px;
+    top: 40px;
+    z-index: 3;
+    opacity: 0;  
+    transition: all 0.5 ease;
+    animation: glow-appear 2s ease;
+    animation-iteration-count: 1;  
+    animation-delay: 1.5s; 
+
+}
+
+.dimensions{
+
+    filter: brightness(140%);
+}
+
+.wallpaper h2{
+
+    font-family: "Great vibes", cursive;
+    color: #c3b09a;
+    top: 20%;
+    /* filter: brightness(130%); */
+    z-index:3;
+    cursor: default;
+}
+
+.wallpaper h2 img{
+
+    width: 10px;
+    opacity: 0.5;
+}
+
+.btrfly{
+
+    width: 170px;
+    top:2.3%;
+    left:31%;
+    filter: brightness(130%);
+    z-index:3;
+    opacity: 0.7;
+}
+
+.bookmark2{
+
+    top: 2%;
+}
+
+.form{
+
+    background-image: url(../imgs/form.png);
+    width: 749px;
+    height: 45.5px;
+    background-color: transparent !important;
+    border: none !important;
+    z-index: 3;
+    transition: all 0.5 ease;
+}
+
+::placeholder{
+
+    padding-left: 10px;
+    color: #d6c3b0;
+    transition: all 1s ease;
+    font-family: "Sorts Mill Goudy", serif;
+}
+
+.form:focus{
+
+    animation: bgs 3s forwards ease;
+    border: none;
+    outline: none;
+    transition: all 0.5 ease;
+}
+
+.form:focus::placeholder{
+
+    color: transparent;
+
+}
+
+@keyframes placeholder{
+
+    100%{
+
+        font-size: 12px;
+    }
+}
+
+input{
+
+    padding: 30px;
+    color: #d6c3b0;
+    z-index: 3;
+}
+
+@keyframes bgs {
+    
+    0%{
+
+        background-image: url(../imgs/form-glow1.png);
+    }
+
+    10%{
+
+        background-image: url(../imgs/form-glow2.png);
+    }
+
+    100%{
+
+        background-image: url(../imgs/bordered-form.png);
+    }
+}
+
+.submit-btn{
+
+    background-image: url(../imgs/Submit-btn.png);
+    width: 129px;
+    height: 43px;
+    background-color: transparent !important;
+    border: none !important;
+    z-index: 3;
+    transition: all 0.5 ease;
+    color: #c3b09a;
+    font-family: "Sorts Mill Goudy", serif;
+    margin: 0 auto;
+    font-size: 14px;
+
+}
+
+.submit-btn:hover{
+
+    filter: brightness(150%);
+    transition: filter 0.5 ease;
+}
+
+.submit-btn:focus{
+
+    animation: backgrounds 3s forwards ease;
+    border: none;
+    outline: none;
+    transition: all 0.5 ease;
+}
+
+@keyframes backgrounds {
+    
+    0%{
+
+        background-image: url(../imgs/sub1.png);
+    }
+
+    10%{
+
+        background-image: url(../imgs/sub2.png);
+    }
+
+    100%{
+
+        background-image: url(../imgs/sub3.png);
+    }
+}
+
+.table-content{
+
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    z-index: 3;
+    top: 70%;
+    width: 80%;
+    border-radius: 50px;
+}
+
+.table-content th{
+
+    color: #c3b09a;
+    font-family: "great vibes", cursive;
+    font-weight: 300;
+    font-size: 20px;
+    transition: all 0.5s ease;
+}
+
+.table-content th:hover{
+
+    filter: brightness(150%);
+    cursor: default;
+    transition: all 0.5s ease;
+}
+
+.table-content tr{
+
+    color: #c3b09a;
+    font-family: "Sorts Mill Goudy", serif;
+
+}
+
+#tableContent button{
+
+    background-color: transparent;
+    border: none;
+    z-index: 3;
+    transition: all 0.5 ease;
+    color: #c3b09a;
+}
+
+#tableContent button:hover{
+
+    filter: brightness(150%);
+    transition: all 0.5 ease;
+}
+
+.normal-font{
+
+    font-family: "lancelot", serif;
+    font-size: 18px;
+}
+
+.error{
+
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.warning{
+
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border: transparent;
+    color: #d6c3b0;
+    animation: 2s forwards box-appear;
+}
+
+@keyframes box-appear {
+    
+    0%{
+
+        opacity: 0;
+    }
+    100%{
+
+        border: rgba(214, 195, 176, 0.359) 1px solid;
+        opacity: 1;
+    }
+}
+
+.slogan{
+
+    animation: slogan-appear 1s forwards;
+    animation-delay: 3.5s;
+    opacity: 0;
+}
+
+@keyframes slogan-appear {
+    
+    100%{
+
+        opacity: 1;
+        font-size: 40px;
+    }
+}
+
+@keyframes object-appear {
+    
+    100%{
+
+        opacity: 1;
+    }
+}
+
+.bookmarkName{
+
+    animation: object-appear 1s forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+.bookmarkUrl{
+
+    animation: object-appear 1s forwards;
+    animation-delay: 2.5s;
+    opacity: 0; 
+}
+
+.submitBtn{
+
+    animation: object-appear 1s forwards;
+    animation-delay: 3s;
+    opacity: 0; 
+}
+
+.fade{
+
+    animation: fade 1s forwards;
+}
+
+@keyframes fade {
+    
+    100%{
+
+        opacity: 0;
+    }
+}
+
+.appear{
+
+    animation: object-appear 1s forwards
+}
+
+@keyframes object-appear {
+    
+    0%{
+
+        opacity: 0;
+    }
+
+    100%{
+
+        opacity: 1;
+    }
+}
